@@ -1,4 +1,5 @@
 import { stripe } from "@/lib/stripe"
+import Head from 'next/head'
 import { HomeContainer, Product } from "@/styles/pages/home"
 
 import Image from "next/image"
@@ -29,6 +30,10 @@ export default function Home({products}: HomeProps) {
 
   return (
     <>
+      <Head>
+        <title>Home | Ignite Shop</title>
+      </Head>
+
       <HomeContainer ref={sliderRef} className="keen-slider">
         {products.map((product) => {
           return(
